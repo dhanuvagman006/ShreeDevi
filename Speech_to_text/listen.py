@@ -1,7 +1,8 @@
 import speech_recognition as sr
-
+import time
 recognizer = sr.Recognizer()
 with sr.Microphone() as source:
+    time.sleep(1)
     print("Please Start Speaking...")
     recognizer.adjust_for_ambient_noise(source)
     audio_data = recognizer.listen(source)
